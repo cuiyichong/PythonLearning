@@ -30,8 +30,9 @@ def pscan(port):
     except:
         return False
 
-for x in range(1,3000):
+for x in range(1,65000):
     if pscan(x):
         print('Port', x, 'is open!\n')
-  #  else:
-     #   print('Port', x, 'is closed')
+        break
+    else:
+        print('Port', x, 'is closed')
